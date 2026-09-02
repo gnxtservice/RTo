@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RTO Services</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    /* LOGIN PAGE */
+    #loginPage {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+
+    .login-box h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #1976d2;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    #error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* MAIN WEBSITE */
+    #mainPage {
+      display: none;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1976d2;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-bottom: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .service-card {
+      display: block;
+      text-decoration: none;
+      color: #222;
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .service-card:hover {
+      background: #eaf3ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGIN PAGE -->
+
+  <div id="loginPage">
+
+    <div class="login-box">
+
+      <h1>RTO Services Login</h1>
+
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter User ID"
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+      >
+
+      <button onclick="login()">
+        Login
+      </button>
+
+      <p id="error"></p>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN PAGE -->
+
+  <div id="mainPage">
+
+    <header>
+      <h1>RTO SERVICES</h1>
+      <p>Online Vehicle Services</p>
+    </header>
+
+
+    <div class="container">
+
+      <!-- SERVICE 1 -->
+
+      <a
+        class="service-card"
+        href="https://vahan.parivahan.gov.in/mobileupdate/"
+      >
+        📱 RC MOBILE NUMBER UPDATE
+      </a>
+
+
+      <!-- SERVICE 2 -->
+
+      <a
+        class="service-card"
+        href="https://vahan.parivahan.gov.in/vahanservice/vahan/ui/onlineservice/form_print_Rc.xhtml"
+      >
+        📄 RC CERTIFICATE DOWNLOAD
+      </a>
+
+
+      <!-- SERVICE 3 -->
+
+      <a
+        class="service-card"
+        href="https://vahan.parivahan.gov.in/vahanservice/vahan/ui/eapplication/form_eApplicatonHome.xhtml"
+      >
+        🚗 RENEWAL REGISTRATION CERTIFICATE
+      </a>
+
+
+      <!-- NEW SERVICES CAN BE ADDED HERE -->
+
+    </div>
+
+
+    <footer>
+      © RTO Services
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    function login() {
+
+      var username =
+        document.getElementById("username").value;
+
+      var password =
+        document.getElementById("password").value;
+
+
+      if (
+        username === "Odisa2323" &&
+        password === "New@1234"
+      ) {
+
+        document.getElementById("loginPage").style.display =
+          "none";
+
+        document.getElementById("mainPage").style.display =
+          "block";
+
+      } else {
+
+        document.getElementById("error").innerText =
+          "Wrong User ID or Password";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
